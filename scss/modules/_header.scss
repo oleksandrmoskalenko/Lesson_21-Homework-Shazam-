@@ -1,0 +1,120 @@
+.header {
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    padding: 19px 35px;
+
+    &__block {
+        align-items: center;
+        position: relative;
+    }
+
+    &__logo {
+        &--shazam {
+        width: 122px;
+        height: 36px;
+        margin-right: 60px;
+        }
+        &--search {
+            @include size(19px);
+            position: absolute;
+            right: 51px;
+            fill: $blue;
+
+            @media(max-width: 768px) {
+                right: 34px;
+            }
+        }
+    }
+
+    &__search {
+        position: absolute;
+        right: 0;
+        margin-right: 18px;
+        padding-left: 20px;
+        width: 372px;
+        height: 44px;
+        border-radius: 22px;
+        background-color: #f4f4f4;
+        font-size: 14px;
+        cursor: pointer;
+        
+        &:focus {
+            box-shadow: 0 0 5px $blue;
+        }
+
+        @media(max-width: 768px) {
+            width: 230px;
+        }
+    }
+}
+
+.menu {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    @include pos (fixed, $z: 1, $t: 30px, $l: 29%);
+
+    &__link {
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        color: #000;
+        padding-right: 38px;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    @media(max-width: 768px) {
+        display: none;
+    }
+}
+
+.burger-menu {
+    @mixin line($top: 0) {
+        background: $blue;
+        border-radius: 3px;
+        position: absolute;
+        transition: .3s;
+        top: $top;
+        @include size(100%, 4px);
+    }
+
+    @include size(18px, 17px);
+    display: block;
+    position: relative;
+    
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    span {   
+        display: block;
+        transform: translateY(-50%);
+        @include line(50%);
+    }
+
+    &::before {
+        @include line();
+        content: '';
+        transform-origin: 0 0;
+    }
+
+    &::after {
+        @include line(calc(100% - 3px));
+        content: '';
+        transform-origin: 0 100%;
+    }
+
+}
+
+.navigation {
+    @include pos(fixed, $t: 0, $l: 0, $z: 99);
+    &__input {
+    display: none;
+    }
+    &__menu {
+        @include pos(fixed, $t: 28px, $r: 31px, $z: 99);
+    }
+}
