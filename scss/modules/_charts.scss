@@ -1,0 +1,45 @@
+.songs-list {
+    
+    &__item {
+        height: 102px;
+        padding: 16px 16px 16px 0;
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+    }
+
+    &__number {
+        font-size: 20px;
+        font-weight: 700;
+        width: 60px;
+        text-align: center;
+    }
+
+    &__img {
+        @include size(70px);
+        border-radius: 4px;
+    }
+
+    &__title {
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+
+        &--title {
+            color: #242424;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        &--subtitle {
+            color: #949494;
+
+        }
+    }
+}

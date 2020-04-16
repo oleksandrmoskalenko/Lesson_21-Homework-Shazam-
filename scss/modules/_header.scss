@@ -18,10 +18,11 @@
             @include size(19px);
             position: absolute;
             right: 51px;
+            top: 8px;
             fill: $blue;
 
             @media(max-width: 768px) {
-                right: 34px;
+                right: 56px;
             }
         }
     }
@@ -29,7 +30,7 @@
     &__search {
         position: absolute;
         right: 0;
-        margin-right: 18px;
+        margin-right: 40px;
         padding-left: 20px;
         width: 372px;
         height: 44px;
@@ -42,8 +43,11 @@
             box-shadow: 0 0 5px $blue;
         }
 
-        @media(max-width: 768px) {
+        @media(max-width: 960px) {
             width: 230px;
+        }
+        @media(max-width: 540px) {
+            display: none;
         }
     }
 }

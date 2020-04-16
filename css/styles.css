@@ -124,17 +124,18 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   height: 19px;
   position: absolute;
   right: 51px;
+  top: 8px;
   fill: #2287ff;
 }
 @media (max-width: 768px) {
   .header__logo--search {
-    right: 34px;
+    right: 56px;
   }
 }
 .header__search {
   position: absolute;
   right: 0;
-  margin-right: 18px;
+  margin-right: 40px;
   padding-left: 20px;
   width: 372px;
   height: 44px;
@@ -146,9 +147,14 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
 .header__search:focus {
   box-shadow: 0 0 5px #2287ff;
 }
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .header__search {
     width: 230px;
+  }
+}
+@media (max-width: 540px) {
+  .header__search {
+    display: none;
   }
 }
 
@@ -321,6 +327,43 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
 .city-select__select:focus {
   border-radius: 20px 20px 0 0;
   border-color: #08ccff;
+}
+
+.songs-list__item {
+  height: 102px;
+  padding: 16px 16px 16px 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+.songs-list__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+.songs-list__number {
+  font-size: 20px;
+  font-weight: 700;
+  width: 60px;
+  text-align: center;
+}
+.songs-list__img {
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
+}
+.songs-list__title {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+.songs-list__title--title {
+  color: #242424;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.songs-list__title--subtitle {
+  color: #949494;
 }
 
 /*# sourceMappingURL=styles.css.map */
