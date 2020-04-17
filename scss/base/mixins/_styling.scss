@@ -35,3 +35,10 @@
 	-webkit-touch-callout: none;
 	user-select: none;
 }
+
+@mixin bg-shape($bg-link) {
+	background: url($bg-link) 100% 100% no-repeat;
+	background-size: cover;
+	position: relative;
+	margin-top: 21px;
+}
