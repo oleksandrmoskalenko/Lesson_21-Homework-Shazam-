@@ -548,11 +548,88 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
 }
 
 .footer {
-  background: #000;
+  background: #141414;
+  width: 100%;
+  height: 553px;
+  padding: 84px 0 40px;
 }
-.footer__link {
+.footer__logo {
+  width: 150px;
+  height: 79px;
+}
+.footer-form {
+  width: 257px;
+  height: 42px;
+  margin-bottom: 28px;
+}
+.footer-form__select {
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: transparent;
+  border: 1px solid #949494;
+  border-radius: 0;
+  color: #949494;
+  width: 100%;
+  padding: 10px 32px 10px 15px;
+  font-size: 18px;
+}
+.footer-store {
+  display: flex;
+}
+.footer-store__logo {
+  width: 110px;
+  height: 38px;
+  margin-right: 20px;
+  border: 1px solid #949494;
+  border-radius: 3px;
+}
+.footer-store__logo--googleplay {
+  background: url(../images/sprite.png) no-repeat center 4.7%;
+  background-size: 200px auto;
+}
+.footer-store__logo--appstore {
+  background: url(../images/sprite.png) no-repeat center top;
+  background-size: 200px auto;
+}
+.footer-list__link {
   text-decoration: none;
   color: #fff;
+  font-size: 18px;
+}
+.footer-list__title {
+  color: #949494;
+  line-height: 40px;
+}
+.footer-list__text {
+  line-height: 40px;
+}
+.footer-follow {
+  margin-top: 50px;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-follow__title {
+  color: #949494;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 400;
+  margin-bottom: 26px;
+}
+.footer-follow__subtitle {
+  color: #646464;
+  font-size: 14px;
+  line-height: 22px;
+  padding-bottom: 60px;
+}
+.footer-follow__logo {
+  display: flex;
+}
+.footer-follow__svg {
+  margin: 0 10px 15px;
+  fill: #fff;
+  zoom: 1.5;
 }
 
 /*# sourceMappingURL=styles.css.map */

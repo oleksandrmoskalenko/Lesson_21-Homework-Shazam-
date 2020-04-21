@@ -1,8 +1,91 @@
 .footer {
-    background: #000;
+    background: #141414;
+    @include size(100%, 553px);
+    padding: 84px 0 40px;
 
-    &__link {
+    &__logo {
+        @include size(150px, 79px);
+    }
+
+    &-form {
+        @include size(257px, 42px);
+        &__select {
+            font-family: 'Roboto', 'Arial', sans-serif;
+            background-color: transparent;
+            border: 1px solid #949494;
+            border-radius: 0;
+            color: #949494;
+            width: 100%;
+            padding: 10px 32px 10px 15px;
+            font-size: 18px; 
+        }
+        margin-bottom: 28px;
+    }
+
+    &-store {
+        display: flex;
+        &__logo {
+            @include size(110px, 38px);
+            margin-right: 20px;
+            border: 1px solid #949494;
+            border-radius: 3px;
+    
+            &--googleplay {
+                background: url(../images/sprite.png) no-repeat center 4.7%;
+                background-size: 200px auto;
+            }
+            &--appstore {
+                background: url(../images/sprite.png) no-repeat center top;
+                background-size: 200px auto;
+            }
+        }
+    }
+
+    &-list {
+        &__link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+        &__title {
+            color: #949494;
+            line-height: 40px;
+        }
+        &__text {
+            line-height: 40px;
+        }
+    }
+
+    &-follow {
+        margin-top: 50px;
         text-decoration: none;
         color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            color: #949494;
+            font-size: 18px;
+            line-height: 40px;
+            font-weight: 400;
+            margin-bottom: 26px;
+        }
+
+        &__subtitle {
+            color: #646464;
+            font-size: 14px;
+            line-height: 22px;
+            padding-bottom: 60px;
+        }
+
+        &__logo {
+            display: flex;
+        }
+        &__svg {
+            margin: 0 10px 15px;
+            fill: #fff;
+            zoom: 1.5;
+        }
     }
 }
