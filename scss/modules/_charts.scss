@@ -5,47 +5,38 @@
             align-items: center;
         }
     }
-
-    &__button {
-    width: 200px;
-    height: 40px;
-    background-color: #008cff;
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 15px;
-    margin: 30px 0 30px 300px;
-    
-    @media (max-width: 768px) {
-        margin-left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    }
 }
 
 .songs-list {
     padding-top: 46px;
     margin-right: 40px;
     
-    &__item {
+    &__item:not(:last-of-type) {
         height: 102px;
         padding: 16px 16px 16px 0;
         border-bottom: 1px solid #f4f4f4;
-        
-        &::after {
-            background-image: #fff;
+        position: relative;
+
+        &::before {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 20'%3E%3Cpath fill-rule='evenodd' d='M16.465 12.586L4.52 19.604A3 3 0 0 1 0 17.018V2.982A3 3 0 0 1 4.52.395l11.945 7.018a3 3 0 0 1 0 5.173z' fill='%23FFFFFF'%3E%3C/path%3E%3C/svg%3E") no-repeat 55% center;
+            background-size: 14px 14px;
+            background-color: #188dfd;
+            border-radius: 50%;
             position: absolute;
-            @include size(30px);
-            top: 0;
-            left: 0;
+            @include size(40px);
+            top: 30px;
+            left: -110px;
             content: '';
-            opacity: 1;
+            opacity: 0;
+            z-index: 999;
         }
 
         &:hover {
-            background-color: #fafafa;
+            &::before {
+                transition: .3s;
+                left: 10px;
+                opacity: 1;
+            }
         }
     }
 
@@ -59,8 +50,7 @@
         &::before {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 73 24' style='width:73px;height:24px;'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23242424' d='M11.993 0C5.37 0 0 5.371 0 12c0 6.627 5.368 12 11.993 12h49.014C67.63 24 73 18.629 73 12c0-6.627-5.368-12-11.993-12H11.993z'%3E%3C/path%3E%3Cg fill='%23FFF'%3E%3Cpath d='M18.286 7.88c.391-.492.657-1.153.587-1.828-.573.028-1.273.38-1.678.873-.363.421-.685 1.11-.601 1.757.643.056 1.286-.323 1.692-.802M18.866 8.809c-.935-.056-1.73.533-2.176.533-.446 0-1.13-.505-1.868-.492-.962.015-1.855.561-2.343 1.43-1.004 1.74-.265 4.32.711 5.737.474.7 1.046 1.472 1.799 1.445.711-.029.99-.463 1.855-.463.864 0 1.115.463 1.868.449.781-.015 1.27-.702 1.744-1.403.544-.799.766-1.57.78-1.613-.014-.014-1.506-.59-1.52-2.314-.014-1.444 1.172-2.131 1.228-2.174-.67-.995-1.716-1.107-2.078-1.135M32.659 17.374V9.632h-.05l-3.156 7.742h-1.204l-3.163-7.742h-.05v7.742h-1.48V6.854h1.878l3.388 8.384h.058l3.38-8.384h1.886v10.52H32.66M42.327 17.374h-1.501v-1.298h-.037c-.42.919-1.196 1.437-2.364 1.437-1.661 0-2.677-1.087-2.677-2.844V9.704h1.567v4.66c0 1.166.551 1.793 1.632 1.793 1.132 0 1.814-.788 1.814-1.983v-4.47h1.566v7.67M46.621 9.566c1.777 0 2.93.991 2.981 2.406H48.13c-.087-.744-.631-1.21-1.509-1.21-.849 0-1.414.415-1.414 1.028 0 .48.348.809 1.175.998l1.24.285c1.56.364 2.155.977 2.155 2.085 0 1.4-1.299 2.362-3.098 2.362-1.908 0-3.054-.94-3.199-2.399h1.552c.146.802.69 1.196 1.647 1.196.943 0 1.523-.394 1.523-1.02 0-.496-.282-.788-1.117-.978l-1.24-.291c-1.45-.336-2.169-1.036-2.169-2.15 0-1.372 1.19-2.312 2.945-2.312M50.987 17.374h1.567v-7.67h-1.567v7.67zm-.123-9.696c0-.503.406-.904.907-.904.5 0 .9.4.9.904a.902.902 0 0 1-.9.904.908.908 0 0 1-.907-.904zM59.169 12.344c-.16-.817-.77-1.466-1.792-1.466-1.211 0-2.01 1.014-2.01 2.661 0 1.684.806 2.661 2.025 2.661.964 0 1.595-.532 1.777-1.421h1.509c-.167 1.633-1.466 2.741-3.301 2.741-2.183 0-3.605-1.502-3.605-3.98 0-2.436 1.422-3.974 3.59-3.974 1.966 0 3.163 1.269 3.301 2.778h-1.494'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             position: absolute;
-            width: 75px;
-            height: 25px;
+            @include size(75px, 25px);
             top: 23px;
             right: -100px;
             content: '';
@@ -149,8 +139,7 @@
     &__svg {
 
         &--apple {
-            width: 75px;
-            height: 25px;
+            @include size(75px, 25px);
             top: 33%;
             right: 60px;
 
@@ -160,6 +149,27 @@
             color: #b3b3b3;
             top: 37%;
             right: 24px;
+        }
+    }
+
+    &__item:last-of-type {
+        height: 102px;
+    }
+
+    &__button {
+        @include size(200px, 50px);
+        background-color: #008cff;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 15px;
+        margin: 20px 0 40px;
+        border-radius: 6px;
+        margin-left: calc(50% - 80px);
+
+        &:hover {
+            filter: brightness(1.08);
+            font-size: 18px;
         }
     }
 }
@@ -184,8 +194,7 @@
     
     &__bg
     {
-        width: 320px;
-        height: 150px;
+        @include size(320px, 150px);
 
         &:hover {
             filter: brightness(0.95);
