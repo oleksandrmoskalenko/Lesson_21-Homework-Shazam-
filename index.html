@@ -9,7 +9,7 @@
 	<meta name="author" content="Admin">
 	<title>Start</title>
 
-	<link rel="icon" href="images/favicon.png">
+	<link rel="icon" href="images/logo.svg">
 	<link rel="stylesheet" href="css/bootstrap-grid.css">
 	<link rel="stylesheet" href="css/styles.css">
 
@@ -374,7 +374,7 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+				<div class="d-flex flex-column align-items-center col-12 align-items-md-start col-md-3">
 					<div class="footer__logo">
 						<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 150 43">
 							<path
@@ -414,11 +414,17 @@
 						</select>
 					</form>
 					<div class="footer-store">
-						<div class="footer-store__logo footer-store__logo--googleplay"></div>
-						<div class="footer-store__logo footer-store__logo--appstore"></div>
+						<a href="https://play.google.com/store/apps/details?id=com.shazam.android"
+							class="footer-store__link">
+							<div class="footer-store__logo footer-store__logo--googleplay"></div>
+						</a>
+						<a href="https://apps.apple.com/app/shazam/id284993459?app=music&ign-itscg=30201&ign-itsct=Shazam_1"
+							class="footer-store__link">
+							<div class="footer-store__logo footer-store__logo--appstore"></div>
+						</a>
 					</div>
 				</div>
-				<div class="offset-4 col-3">
+				<div class="offset-1 col-6 offset-md-4 col-md-3">
 					<ul class="footer-list">
 						<li class="footer-list__item">
 							<a href="" class="footer-list__link">
@@ -442,7 +448,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-2">
+				<div class="col-5 col-md-2">
 					<ul class="footer-list">
 						<li class="footer-list__item">
 							<a href="" class="footer-list__link">

@@ -78,15 +78,26 @@
                 right: 60px;
                 opacity: 1;
 
+                @media (max-width: 960px) {
+                    right: 0px;
+                }
+
                 @media (max-width: 768px) {
-                    right: 30%;
-                    top: 45px;
+                    right: 51%;
+                }
+
+                @media (max-width: 576px) {
+                    right: 50%;
                 }
             }
             &::after {
                 transition: .3s;
                 right: 24px;
                 opacity: 1;
+
+                @media (max-width: 960px) {
+                    right: -20px;
+                }
 
                 @media (max-width: 768px) {
                     right: 0px;

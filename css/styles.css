@@ -402,16 +402,30 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   right: 60px;
   opacity: 1;
 }
+@media (max-width: 960px) {
+  .songs-list__link:hover::before {
+    right: 0px;
+  }
+}
 @media (max-width: 768px) {
   .songs-list__link:hover::before {
-    right: 30%;
-    top: 45px;
+    right: 51%;
+  }
+}
+@media (max-width: 576px) {
+  .songs-list__link:hover::before {
+    right: 50%;
   }
 }
 .songs-list__link:hover::after {
   transition: 0.3s;
   right: 24px;
   opacity: 1;
+}
+@media (max-width: 960px) {
+  .songs-list__link:hover::after {
+    right: -20px;
+  }
 }
 @media (max-width: 768px) {
   .songs-list__link:hover::after {
@@ -553,6 +567,11 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   height: 553px;
   padding: 84px 0 40px;
 }
+@media (max-width: 768px) {
+  .footer {
+    height: 798px;
+  }
+}
 .footer__logo {
   width: 150px;
   height: 79px;
@@ -590,10 +609,25 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   background: url(../images/sprite.png) no-repeat center top;
   background-size: 200px auto;
 }
+@media (max-width: 768px) {
+  .footer-store {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-list:last-of-type {
+    padding-left: 10px;
+  }
+}
 .footer-list__link {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  .footer-list__link {
+    font-size: 16px;
+  }
 }
 .footer-list__title {
   color: #949494;
@@ -617,11 +651,22 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   font-weight: 400;
   margin-bottom: 26px;
 }
+@media (max-width: 768px) {
+  .footer-follow__title {
+    font-size: 16px;
+  }
+}
 .footer-follow__subtitle {
   color: #646464;
   font-size: 14px;
   line-height: 22px;
   padding-bottom: 60px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .footer-follow__subtitle {
+    width: 280px;
+  }
 }
 .footer-follow__logo {
   display: flex;
