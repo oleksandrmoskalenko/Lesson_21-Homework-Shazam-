@@ -507,6 +507,7 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
   }
 }
 .charts-list__title {
@@ -579,7 +580,7 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
 .footer-form {
   width: 257px;
   height: 42px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 .footer-form__select {
   font-family: "Roboto", "Arial", sans-serif;
@@ -590,9 +591,6 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
   width: 100%;
   padding: 10px 32px 10px 15px;
   font-size: 18px;
-}
-.footer-store {
-  display: flex;
 }
 .footer-store__logo {
   width: 110px;
@@ -611,7 +609,7 @@ input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-searc
 }
 @media (max-width: 768px) {
   .footer-store {
-    margin-bottom: 30px;
+    margin: 60px 0 -20px;
   }
 }
 @media (max-width: 768px) {
